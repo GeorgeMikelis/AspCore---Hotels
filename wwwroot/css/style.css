@@ -1,0 +1,448 @@
+html,
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+}
+
+.generic-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.generic-containerLanding {
+  background-image: url(landingScreen.jpeg);
+  background-size: cover;
+}
+
+.generic-containerLogin {
+  background-image: url(login.jpg);
+  background-size: cover;
+}
+
+.form {
+  margin: auto;
+  min-width: 650px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  box-shadow: 2px 3px 4px black;
+  opacity: 0.9;
+}
+
+.login-form {
+  min-width: 450px;
+  max-height: 200px;
+  background-color: rgba(127, 127, 127, 0.5);
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+}
+
+.login-form * {
+  align-self: start;
+  margin-top: 0.5rem;
+}
+
+
+.title {
+  padding: 0.5rem 0.5rem;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+  color: whitesmoke;
+}
+
+.topnav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #F15B25;
+  color: white;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+select {
+  padding: 10px;
+  border-radius: 4px;
+  min-width: 190px;
+}
+
+input {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+  min-width: 190px;
+
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.primary-btn {
+  cursor: pointer;
+  border: 1px solid #F15B25;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px;
+  background-color: #F15B25;
+}
+
+.room-btn {
+  color: #f2f2f2;
+  cursor: pointer;
+  border: 1px solid #F15B25;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px;
+  background-color: #F15B25;
+  font-size: medium;
+}
+
+.primary-btn:hover {
+  zoom: 1.1;
+}
+
+.room-btn:hover {
+  zoom: 1.1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 1);
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+label {
+  font-weight: bold;
+  color: rgb(66, 66, 66);
+}
+
+.checked {
+  color:orange
+}
+
+.heart{
+  color: red;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
+
+.no-border {       
+  border:none !important;
+}
+
+ol{
+  padding: 1rem;
+}
+
+button {
+  align-self: center;
+}
+
+.label{
+  width: 5rem;
+  font-size: larger;
+  color:#F15B25;
+  -webkit-text-fill-color:#F15B25;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+}
+
+li{
+  font-size: large;
+}
+
+.profile-container {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.favRevContainer{
+  display: flex;
+  flex: 1;
+}
+
+.bookingsContainer{
+  display: flex;
+  flex: 3;
+}
+
+.bookingsBar {
+  width: auto;
+  height: 2.5rem;
+  display: flex;
+  background-color: #F15B25;
+  padding-left: 1rem;
+  font-size: 24px;
+  font-family: "Roboto Slab", serif;
+  color: whitesmoke;
+}
+
+.shortRoomDescription{
+  width: 90%;
+  max-width: 765px;
+}
+
+.smallDescriptionText{
+  width: 70%;
+}
+
+.imgContainer{
+  width: 7rem;
+}
+
+.resizeImg {
+  width: 7rem;
+  height: auto;
+}
+
+.resizeImgInfo {
+  width: fit-content;
+  height: auto;
+}
+
+.vl {
+  border-left: 2px solid #F15B25;
+  height: 6rem;
+}
+
+.vlAuto {
+  border-left: 2px solid #F15B25;
+  height: auto;
+  width: auto;
+}
+
+.bookBoxContainer{
+  display: flex;
+  flex-direction: row-reverse; 
+}
+
+.bookBox{
+  width: fit-content;
+  height:2rem;
+  color: whitesmoke;
+  background-color: #D80D0D;
+  font-size: medium;
+  white-space: nowrap;
+  padding: 0 10px;
+  align-items: center;
+  display: flex; 
+}
+
+.revContainer{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.submitContainer{
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+h5 {
+  display: block;
+  margin-block-start: 0rem;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: lighter;
+}
+
+.barContainer{
+  display: flex;
+  width: 100%;
+}
+
+.infoBar {
+  background-color: #EEEEEE;
+  display: flex;    
+  width: auto;
+  height:40px;
+}
+
+.infoBar p {
+              
+  color: black;
+  padding: 0 10px;
+  border-right: 1px solid black;
+  font-size:14px;
+  white-space: nowrap; 
+}
+
+.costBox{
+  display: flex; 
+  height:40px;
+  padding: 0 10px;
+  color: #f2f2f2;
+  background-color: #757575;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.fTitle{
+  text-align: center;
+  align-self: center;
+  font-size: 23px;
+  color:#F15B25;
+  -webkit-text-fill-color:#F15B25;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+}
+
+.roomList-container {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.filtersContainer{
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.resultsContainer{
+  display: flex;
+  flex: 3;
+}
+
+.resultsBar {
+  width: auto;
+  height: 2.5rem;
+  display: flex;
+  background-color: #F15B25;
+  padding-left: 1rem;
+  font-size: 24px;
+  font-family: "Roboto Slab", serif;
+  color: whitesmoke;
+}
+.roomInfo-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 8rem;
+  margin-left: 8rem;
+}
+
+.hotelBar {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+  background-color: #F15B25;
+  font-family: "Roboto Slab", serif;
+  color: whitesmoke;
+}
+
+.hotelBarBox {
+  padding: 0.5rem 0.5rem;
+  font-size: large;
+  font-family: "Roboto Slab", serif;
+  color: whitesmoke;
+  display: flex;
+}
+
+.hotelBarBox p {
+  font-size: large;
+  border-left: 1px solid whitesmoke;
+  padding: 0 10px;
+  white-space: nowrap; 
+  align-self: flex-end;
+}
+
+.roomBar {
+  align-items: center;
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+  height: 4rem;
+  background-color: #F15B25;
+  color: whitesmoke;
+}
+
+.box{
+  min-width: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  font-size: large;
+  font-weight: bold;
+}
+
+.vl-dashed {
+  border-left: 2px dashed whitesmoke;
+  height: 3rem;
+}
+
+hl.dashed {
+  border-top: 2px dashed black;
+}
+.slider-wrapper {
+ width: 100%;
+}
