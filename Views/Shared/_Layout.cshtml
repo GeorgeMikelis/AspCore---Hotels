@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="generic-container generic-containerLogin">
-        <div class="topnav">
+    <div class="generic-container">
+        <header class="topnav">
             <div class="title">
                 HOTELS
             </div>
@@ -24,9 +24,9 @@
                 <a href="#home"><i class="fa fa-home"></i> Home</a>
                 <a href="#logout"><i class="fa fa-sign-out"></i> Logout</a>
             </div>
-        </div>
+        </header>
         <div class="generic-container">
-            <main role="main" class="pb-3">
+            <main role="main" class="d-flex grow">
                 @RenderBody()
             </main>
         </div>
@@ -46,7 +46,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../shared-js/main.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
     @RenderSection("Scripts", required: false)
 

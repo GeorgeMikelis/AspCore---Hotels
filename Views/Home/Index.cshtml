@@ -2,7 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="form-container generic-containerLanding">
+    <div class="form">
+        <div class="col">
+            <div class="row justify-center mt-1">
+                <select class="mr-1" name="city" id="city">
+                    <option value="" disabled selected>City</option>
+                    <option value="athens">Athens</option>
+                    <option value="paris">Paris</option>
+                    <option value="london">London</option>
+                    <option value="berlin">Berlin</option>
+                </select>
+                <select name="roomType" id="roomType">
+                    <option value="" disabled selected>Room Type</option>
+                    <option value="oneBed">1 Bed</option>
+                    <option value="towBeds">2 Beds</option>
+                    <option value="threeBeds">3 Beds</option>
+                    <option value="fourBeds">4 Beds</option>
+                </select>
+            </div>
+            <div class="row justify-center mt-1">
+                <input type="text" class="mr-1" placeholder="Check-in Date">
+                <input type="text" placeholder="Check-out Date">
+            </div>
+            <div class="row justify-center mt-1">
+                <button type="button" class="primary-btn">SEARCH</button>
+            </div>
+        </div>
+    </div>
 </div>

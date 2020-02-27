@@ -15,13 +15,13 @@ body {
 }
 
 .generic-containerLanding {
-  background-image: url(landingScreen.jpeg);
+  background-image: url(../img/landingScreen.jpeg);
   background-size: cover;
 }
 
 .generic-containerLogin {
-  background-image: url(login.jpg);
-  background-size: cover;
+    background-image: url(../img/login.jpg);
+    background-size: cover;
 }
 
 .form {
