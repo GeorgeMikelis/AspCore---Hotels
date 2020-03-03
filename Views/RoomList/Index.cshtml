@@ -1,8 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Room List";
 }
+
+@model Hotels.Models.SearchFiltersModel
+
 <div class="roomList-container">
-    <div class="col mt-3 ml-3 filtersContainer">
+    <form class="col mt-3 ml-3 filtersContainer" method="get">
         <div class="fTitle">
             FIND THE PERFECT<br>HOTEL
         </div>
@@ -15,10 +18,10 @@
         </select>
         <select class="mb-1" name="city" id="city">
             <option value="" disabled selected>City</option>
-            <option value="athens">Athens</option>
-            <option value="paris">Paris</option>
-            <option value="london">London</option>
-            <option value="berlin">Berlin</option>
+            @foreach (var item in Model.Cities)
+            {
+                <option value="@item">@item</option>
+            }
         </select>
         <select class="mb-1" name="roomType" id="roomType">
             <option value="" disabled selected>Room Type</option>
@@ -39,8 +42,9 @@
         <input type="text" id="datepicker-2months">
         <br />
         <input type="text" id="datepicker-3months-right">
+        <button type="submit" class="mt-1 room-btn flex-grow-1">FIND HOTEL</button>
 
-    </div>
+    </form>
     <div class="col mt-3 ml-3 resultsContainer">
         <div class="resultsBar">
             Search Results
