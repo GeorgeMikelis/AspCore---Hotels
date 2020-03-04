@@ -2,32 +2,34 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model Hotels.Models.SearchFiltersModel
+
 <div class="form-container generic-containerLanding">
     <div class="form">
-        <div class="col">
+        <form class="col">
             <div class="row justify-center mt-1">
                 <select class="mr-1" name="city" id="city">
                     <option value="" disabled selected>City</option>
-                    <option value="athens">Athens</option>
-                    <option value="paris">Paris</option>
-                    <option value="london">London</option>
-                    <option value="berlin">Berlin</option>
+                    @foreach (var item in Model.CountOfGuests)
+                    {
+                        <option value="@item">@item</option>
+                    }
                 </select>
                 <select name="roomType" id="roomType">
                     <option value="" disabled selected>Room Type</option>
-                    <option value="oneBed">1 Bed</option>
-                    <option value="towBeds">2 Beds</option>
-                    <option value="threeBeds">3 Beds</option>
-                    <option value="fourBeds">4 Beds</option>
+                    @foreach (var item in Model.RoomTypes)
+                    {
+                        <option value="@(item.Item1)">@(item.Item2)</option>
+                    }
                 </select>
             </div>
             <div class="row justify-center mt-1">
-                <input type="text" class="mr-1" placeholder="Check-in Date">
-                <input type="text" placeholder="Check-out Date">
+                <input type="text" id="datepicker-2months" class="mr-1" placeholder="Check-in Date" >
+                <input type="text" id="datepicker-3months-right" placeholder="Check-out Date">
             </div>
             <div class="row justify-center mt-1">
-                <button type="button" class="primary-btn">SEARCH</button>
+                <button  asp-controller="RoomList" asp-action="Index" type="submit" class="primary-btn">SEARCH</button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
