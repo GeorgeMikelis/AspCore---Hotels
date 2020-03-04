@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Hotels.Models.SearchFiltersModel>
+
+<ul class="row shortRoomDescription mt-3 ml-1 mr-1">
+    @foreach (var room in Model)
+    {
+        <li>
+            <div class="imgContainer ">
+                <img src="@(room.Photo)" class="resizeImg">
+            </div>
+            <div class="vl ml-1 mr-1"></div>
+            <div class="col smallDescriptionText">
+                <h3>@(room.Name)</h3>
+                <h5>@(room.Cities), @(room.Area)</h5>
+                <p class="text">
+                    @(room.ShortDescription)
+                </p>
+                <div class="row justify-end mt-1">
+                    <button asp-controller="RoomInfo" asp-action="Index" type="button" class="room-btn">Go to Room Page</button>
+                </div>
+            </div>
+            <div class="space-between barContainer mt-1">
+                <div class="costBox mr-1">
+                    <p>Per Night: @(room.Price)&euro;</p>
+                </div>
+                <div class="infoBar">
+                    <p style="padding: 0 100px;">Count of Guests: @(room.CountOfGuests)</p>
+                    <p style="padding: 0 100px;" class="no-border">Type of Room: @(room.RoomTypes)</p>
+                </div>
+            </div>
+        </li>
+    }
+</ul>

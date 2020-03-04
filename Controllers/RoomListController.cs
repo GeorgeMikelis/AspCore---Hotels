@@ -14,10 +14,8 @@ namespace Hotels.Controllers
         public RoomListController(WdaContext context)
         {
             _context = context;
-           
-
         }
-        public IActionResult Index()
+        public IActionResult Index(string city)
         {
             var allCities = _context.Room.Select(room => room.City).Distinct().ToArray();
             var allRoomTypes = _context.RoomType
@@ -31,8 +29,13 @@ namespace Hotels.Controllers
                 RoomTypes = allRoomTypes
             };
 
-            return View(model);
-         
+            if (!string.IsNullOrEmpty(city))
+                return View(_context.Room.Where(room => room.City == city));
+            else
+                return View(_context.Room);
         }
+
+        
+
     }
 }
