@@ -14,8 +14,6 @@ namespace Hotels.Controllers
         public RoomListController(WdaContext context)
         {
             _context = context;
-           
-
         }
         public IActionResult Index()
         {
@@ -32,7 +30,8 @@ namespace Hotels.Controllers
             };
 
             return View(model);
-         
         }
+
+        
     }
 }
