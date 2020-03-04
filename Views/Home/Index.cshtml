@@ -10,7 +10,7 @@
             <div class="row justify-center mt-1">
                 <select class="mr-1" name="city" id="city">
                     <option value="" disabled selected>City</option>
-                    @foreach (var item in Model.CountOfGuests)
+                    @foreach (var item in Model.Cities)
                     {
                         <option value="@item">@item</option>
                     }
