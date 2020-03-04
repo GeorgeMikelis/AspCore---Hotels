@@ -6,7 +6,7 @@
 
 <div class="form-container generic-containerLanding">
     <div class="form">
-        <form class="col">
+        <form class="col" method="get">
             <div class="row justify-center mt-1">
                 <select class="mr-1" name="city" id="city">
                     <option value="" disabled selected>City</option>
@@ -28,7 +28,7 @@
                 <input type="text" id="datepicker-3months-right" placeholder="Check-out Date">
             </div>
             <div class="row justify-center mt-1">
-                <button  asp-controller="RoomList" asp-action="Index" type="submit" class="primary-btn">SEARCH</button>
+                <button asp-controller="RoomList" asp-action="Index" type="submit" class="primary-btn">SEARCH</button>
             </div>
         </form>
     </div>
