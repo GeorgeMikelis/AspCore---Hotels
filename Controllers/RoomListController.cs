@@ -29,10 +29,8 @@ namespace Hotels.Controllers
                 RoomTypes = allRoomTypes
             };
 
-            if (!string.IsNullOrEmpty(city))
-                return View(_context.Room.Where(room => room.City == city));
-            else
-                return View(_context.Room);
+            
+            return View(model);
         }
 
         
