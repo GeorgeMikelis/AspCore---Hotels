@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hotels.ViewComponents
 {
-    public class RoomBoxComponent : ViewComponent
+    public class RoomBoxViewComponent : ViewComponent
     {
         private readonly WdaContext _context;
 
-        public RoomBoxComponent(WdaContext context)
+        public RoomBoxViewComponent(WdaContext context)
         {
             _context = context;
         }
