@@ -15,15 +15,23 @@ namespace Hotels.Controllers
         {
             _context = context;
         }
-       
 
-        public IActionResult Index(string city)
+        public IActionResult Index(string city, int roomType)
         {
+            IQueryable<Hotels.Models.Room> result = _context.Room;
             if (!string.IsNullOrEmpty(city))
-                return View(_context.Room.Where(room => room.City == city));
-            else
-                return View(_context.Room);
+            {
+                ViewData["city"] = city;
+                result = result.Where(room => room.City == city);
+            }
+            if (roomType != 0)
+            {
+                result = result.Where(room => room.RoomType == roomType);
+            }
+
+            return View(result);
         }
+
 
     }
 }
