@@ -33,7 +33,5 @@ namespace Hotels.Controllers
             return View(model);
         }
 
-        
-
     }
 }
