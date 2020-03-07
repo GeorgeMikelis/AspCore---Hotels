@@ -16,7 +16,7 @@
             {
                 <li style="list-style-type:none" class="row shortRoomDescription mt-3 ml-1 mr-1">
                     <div class="imgContainer ">
-                        <img src="~/img/room-@(room.RoomId).jpg" class="resizeImg">
+                        <img src="~/img/@(room.Photo)" class="resizeImg">
                     </div>
                     <div class="vl ml-1 mr-1"></div>
                     <div class="col smallDescriptionText">
@@ -26,7 +26,7 @@
                             @(room.ShortDescription)
                         </p>
                         <div class="row justify-end mt-1">
-                            <button asp-controller="RoomInfo" asp-action="Index" type="button" class="room-btn">Go to Room Page</button>
+                            <a style="text-decoration:none" class="room-btn" asp-controller="RoomInfo" asp-action="Index" asp-route-roomId="@room.RoomId">Go to Room Page</a>
                         </div>
                     </div>
                     <div class="space-between barContainer mt-1">
