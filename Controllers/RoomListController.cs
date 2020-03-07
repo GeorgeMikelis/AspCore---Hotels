@@ -16,9 +16,13 @@ namespace Hotels.Controllers
             _context = context;
         }
 
-        public IActionResult Index(string city, int roomType)
+        public IActionResult Index(string city, int roomType, int countOfGuests)
         {
             IQueryable<Hotels.Models.Room> result = _context.Room;
+            if (countOfGuests != 0)
+            {
+                result = result.Where(room => room.CountOfGuests == countOfGuests);
+            }
             if (!string.IsNullOrEmpty(city))
             {
                 ViewData["city"] = city;
@@ -28,6 +32,7 @@ namespace Hotels.Controllers
             {
                 result = result.Where(room => room.RoomType == roomType);
             }
+            
 
             return View(result);
         }
