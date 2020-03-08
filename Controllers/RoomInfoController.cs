@@ -13,21 +13,17 @@ namespace Hotels.Controllers
 
         public RoomInfoController(WdaContext context)
         {
+            
             _context = context;
+            
+
         }
 
-        public IActionResult Index(Room room)
+        
+        public IActionResult Index(int roomId)
         {
-            room = new Room
-            {
-                RoomId = room.RoomId,
-                Name = room.Name,
-                City = room.City
+            var room = _context.Room.Where(r => r.RoomId == roomId).FirstOrDefault(); 
 
-                
-
-            };
-            
             return View(room);
         }
     }
