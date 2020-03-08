@@ -24,42 +24,42 @@
         </div>
         <div class="roomBar mt-3">
             <div class="box">
-                <span style="margin-bottom: 0.3rem;" class="fa fa-male">1</span>
+                <span style="margin-bottom: 0.3rem;" class="fa fa-male">@(Model.CountOfGuests)</span>
                 <div>COUNT OF GUESTS</div>
             </div>
             <div class="vl-dashed">
 
             </div>
             <div class="box">
-                <span style="margin-bottom: 0.3rem;">1</span>
+                <span style="margin-bottom: 0.3rem;">@(Model.RoomType)</span>
                 <div>TYPE OF ROOM</div>
             </div>
             <div class="vl-dashed">
 
             </div>
             <div class="box">
-                <span style="margin-bottom: 0.3rem;">Yes</span>
+                <span style="margin-bottom: 0.3rem;">@(Model.Parking)</span>
                 <div>PARKING</div>
             </div>
             <div class="vl-dashed">
 
             </div>
             <div class="box">
-                <span style="margin-bottom: 0.3rem;" class="fa fa-wifi">Yes</span>
+                <span style="margin-bottom: 0.3rem;" class="fa fa-wifi">@(Model.Wifi)</span>
                 <div>WIFI</div>
             </div>
             <div class="vl-dashed">
 
             </div>
             <div class="box">
-                <span style="margin-bottom: 0.3rem;">No</span>
+                <span style="margin-bottom: 0.3rem;">@(Model.PetFriendly)</span>
                 <div>PET FRIENDLY</div>
             </div>
         </div>
         <div class="vlAuto mt-1 pl-1">
             <p class="mb-1" style="font-size: 22px; font-weight: bold;"> Room Descriprion<p>
             <p>
-                Suspendisse a nibh tincidunt, pharetra leo semper, maximus quam. Nunc scelerisque cursus consectetur. Vivamus purus turpis, bibendum eget laoreet sed, tincidunt et risus. Ut elementum vestibulum urna at efficitur. Sed a congue est. Duis vel eros et risus vulputate pellentesque id id massa. Nullam interdum sem interdum urna aliquam, sit amet dapibus nisi iaculis. Suspendisse porttitor rhoncus eleifend. Quisque laoreet eros tincidunt urna varius faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim molestie metus, quis commodo sem commodo ut. Nulla malesuada cursus orci, porttitor fermentum nunc facilisis a.
+                @(Model.LongDescription)
             </p>
         </div>
         <div class="bookBoxContainer mb-3">
